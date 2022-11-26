@@ -1,0 +1,10 @@
+<h1>カレンダー</h1>
+
+<%= month_calendar diaries: @daiaries do |date, diary| %>
+  <%# <% binding.pry %>
+  <%= link_to date.day, diary_path(date.to_s) %>
+<% end %>
+
+<br>
+<br>
+<%= link_to "ログアウト", logout_path, method: :delete %>

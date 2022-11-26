@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.2'
 
+#カレンダーを簡単に作れるgem
+gem 'simple_calendar'
 #デバッグ
 gem 'pry-rails'
 #ユーザー機能
