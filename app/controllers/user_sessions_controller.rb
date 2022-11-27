@@ -1,8 +1,9 @@
-class UserSessionsController < ApplicationController
-  before_action :already_logged_in, only: %i[ new create ]
+# frozen_string_literal: true
 
-  def new
-  end
+class UserSessionsController < ApplicationController
+  before_action :already_logged_in, only: %i[new create]
+
+  def new; end
 
   def create
     @user = login(params[:email], params[:password])

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class DiariesController < ApplicationController
   before_action :require_login
 
@@ -5,7 +7,5 @@ class DiariesController < ApplicationController
     @diaries = current_user.diaries
   end
 
-  def show
-
-  end
+  def show; end
 end
