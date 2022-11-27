@@ -1,0 +1,21 @@
+<%= form_with model: diary do |f| %>
+  <div>
+    <%= f.label :good_or_bad, "もうすぐ今日が終わる。やり残したことはないかい？" %>
+    <%= f.select :good_or_bad,[ ["はい", "good"], ["いいえ", "bad"] ] %>
+  </div>
+  
+  <div>
+    <%= f.label :review_the_day, "今日の振り返り(400文字以内)" %>
+    <%= f.text_area :review_the_day %>
+  </div>
+  
+  <div>
+    <%= f.label :for_me_tommorrow, "明日の自分へ(400文字以内)" %>
+    <%= f.text_area :for_me_tommorrow %>
+  </div>
+
+  <div>
+    <%= f.submit "送信" %>
+  </div>
+
+<% end %>

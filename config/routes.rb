@@ -2,7 +2,7 @@
 
 Rails.application.routes.draw do
   # 日記カレンダー機能
-  resources :diaries, only: %i[index show]
+  resources :diaries, only: %i[index new create show]
 
   # ログイン機能
   get 'login', to: 'user_sessions#new'
