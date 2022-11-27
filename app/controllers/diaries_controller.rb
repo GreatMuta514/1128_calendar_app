@@ -1,4 +1,6 @@
 class DiariesController < ApplicationController
+  before_action :require_login
+
   def index
     @diaries = current_user.diaries
   end
