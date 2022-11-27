@@ -14,7 +14,7 @@ class DiariesController < ApplicationController
   def create
     @diary = Diary.new(diary_params)
     if @diary.save
-      redirect_to diaries_path
+      redirect_to completion_diaries_path
     else
       flash.now[:danger] = '日記の作成に失敗しました'
       render 'form'
@@ -22,6 +22,8 @@ class DiariesController < ApplicationController
   end
 
   def show; end
+
+  def completion; end
 
   private
 
