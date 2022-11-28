@@ -22,7 +22,9 @@ class DiariesController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @diary = Diary.find_by(user: current_user, start_time: params[:id].to_time)
+  end
 
   def completion; end
 

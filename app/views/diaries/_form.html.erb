@@ -1,6 +1,6 @@
 <%= form_with model: diary do |f| %>
   <div>
-    <%= f.label :good_or_bad, "もうすぐ今日が終わる。やり残したことはないかい？" %>
+    <%= f.label :good_or_bad, "今日は良い1日だった？" %>
     <%= f.select :good_or_bad,[ ["はい", "good"], ["いいえ", "bad"] ] %>
   </div>
   

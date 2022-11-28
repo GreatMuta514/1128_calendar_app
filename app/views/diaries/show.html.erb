@@ -1,0 +1,7 @@
+<h1><%= params[:id] %>の日記</h1>
+<% if @diary %>
+  <%= render 'diary', diary: @diary %>
+<% else %>
+  <h4>この日は日記を書いていません</h4>
+<% end %>
+<%= link_to "カレンダーに戻る", diaries_path %>
