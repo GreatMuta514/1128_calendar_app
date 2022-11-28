@@ -15,7 +15,7 @@ class UsersController < ApplicationController
 
     if @user.save
       auto_login(@user)
-      redirect_to diaries_path, notice: 'User was successfully created.'
+      redirect_to diaries_path, notice: 'ユーザー登録が完了しました'
     else
       render :new, status: :unprocessable_entity
     end

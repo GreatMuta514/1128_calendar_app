@@ -1,0 +1,19 @@
+ja:
+  activerecord:
+    models:
+      user: ユーザー
+    attributes:
+      user:
+        id:
+        nickname: ニックネーム
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: パスワード確認
+      diary:
+        id:
+        good_or_bad:
+          good: はい
+          bad: いいえ
+        review_the_day: 振り返り
+        for_me_tommorrow: 明日の自分へ
+

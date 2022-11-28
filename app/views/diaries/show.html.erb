@@ -1,7 +1,11 @@
-<h1><%= l params[:id].to_time %>の日記</h1>
-<% if @diary %>
-  <%= render 'diary', diary: @diary %>
-<% else %>
-  <h4>この日は日記を書いていません</h4>
-<% end %>
-<%= link_to "カレンダーに戻る", diaries_path %>
+<div class="container">
+  <h2 class="my-4"><%= l params[:id].to_time %>の日記</h2>
+  <% if @diary %>
+    <%= render 'diary', diary: @diary %>
+  <% else %>
+    <h5 class="text-center">この日は日記を書いていません</h5>
+  <% end %>
+  <div class="text-center mt-4">
+    <%= link_to "カレンダーに戻る", diaries_path %>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+ja:
+  enums:
+    diary:
+      good_or_bad:
+        good: はい
+        bad: いいえ
