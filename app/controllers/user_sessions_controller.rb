@@ -21,4 +21,15 @@ class UserSessionsController < ApplicationController
     logout
     redirect_to(root_path, notice: 'ログアウトしました')
   end
+
+  def guest_login
+    @guest_user = User.create(
+    nickname: 'ゲスト',
+    email: SecureRandom.alphanumeric(10) + "@guest.com",
+    password: 'password',
+    password_confirmation: 'password'
+    )
+    auto_login(@guest_user)
+    redirect_to diaries_path, success: 'ゲストとしてログインしました'
+  end
 end

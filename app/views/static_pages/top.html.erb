@@ -1,8 +1,11 @@
 <div class="container text-center">
-  <h1 class="fw-bold">カレンダーアプリ</h1>
-  <div class="row">
+  <h1 class="fw-bold my-5">カレンダーアプリ</h1>
+  <div class="row mt-5">
     <div class="col">
       <%= link_to "新規登録", new_user_path, class:"btn btn-primary" %>
+    </div>
+    <div class="col">
+      <%= link_to "ゲストログイン", guest_login_path, class:"btn btn-warning", method: :post %>
     </div>
     <div class ="col">
       <%= link_to "ログイン", login_path, class:"btn btn-primary" %>

@@ -2,7 +2,7 @@
 
 class DiariesController < ApplicationController
   before_action :require_login
-  before_action :duplication_check, only: :create
+  before_action :duplication_check, only: %i[new create]
 
   def index
     @diaries = current_user.diaries
