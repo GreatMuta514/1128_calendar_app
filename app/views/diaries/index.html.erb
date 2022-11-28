@@ -6,6 +6,8 @@
   <% end %>
 
   <div class="text-center mt-4">
-    <%= link_to "日記を入力する", new_diary_path, class:'btn btn-primary' %>
+    <%= link_to new_diary_path, class: 'btn btn-primary' do %>
+      日記を入力する<i class="fas fa-pencil-alt"></i>
+    <% end %>
   </div>
 </div>

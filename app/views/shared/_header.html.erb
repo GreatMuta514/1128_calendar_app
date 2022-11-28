@@ -10,6 +10,7 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <%= current_user.nickname %>
+            <i class="fas fa-user"></i>
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
             <%= link_to "ログアウト", logout_path, method: :delete, class: "dropdown-item" %>
