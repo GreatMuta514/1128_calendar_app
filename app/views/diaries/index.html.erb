@@ -6,8 +6,14 @@
   <% end %>
 
   <div class="text-center mt-4">
-    <%= link_to new_diary_path, class: 'btn btn-primary' do %>
-      日記を入力する<i class="fas fa-pencil-alt"></i>
+    <% if current_user.diaries.find_by(start_time: Time.current.beginning_of_day) %>
+      <%= link_to new_diary_path, class: 'btn btn-primary disabled' do %>
+        今日はに入力済みです<i class="fas fa-pencil-alt"></i>
+      <% end %>
+    <% else %>
+      <%= link_to new_diary_path, class: 'btn btn-primary' do %>
+        今日の日記を入力する<i class="fas fa-pencil-alt"></i>
+      <% end %>
     <% end %>
   </div>
 </div>
