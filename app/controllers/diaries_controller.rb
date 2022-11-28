@@ -36,6 +36,7 @@ class DiariesController < ApplicationController
   end
 
   def duplication_check
-    redirect_to diaries_path, notice: "今日の日記はすでに登録済みです" if Diary.find_by(user: current_user, start_time: Time.current.beginning_of_day)
+    redirect_to diaries_path, notice: '今日の日記はすでに登録済みです' if Diary.find_by(user: current_user,
+                                                                         start_time: Time.current.beginning_of_day)
   end
 end

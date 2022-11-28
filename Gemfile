@@ -5,9 +5,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.2'
 
-#bootstrap
+# bootstrap
 gem 'bootstrap', '~> 5.1.0'
-#日本語化
+# 日本語化
 gem 'rails-i18n'
 # リファクタリング
 gem 'rubocop', require: false
