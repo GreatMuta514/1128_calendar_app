@@ -1,21 +1,25 @@
 <%= form_with model: diary do |f| %>
-  <div>
-    <%= f.label :good_or_bad, "今日(#{l(Time.current, format: :short)})は良い1日だった？" %>
-    <%= f.select :good_or_bad,[ ["はい", "good"], ["いいえ", "bad"] ] %>
+  <div class="mt-3">
+    <%= f.label :good_or_bad, "今日(#{l(Time.current, format: :short)})は良い1日だった？", class:"form-label" %>
+    <%= f.select :good_or_bad,[ ["はい", "good"], ["いいえ", "bad"] ], class:"form-control" %>
   </div>
   
-  <div>
-    <%= f.label :review_the_day, "今日(#{l(Time.current, format: :short)})の振り返り(400文字以内)" %>
-    <%= f.text_area :review_the_day %>
+  <div class="mt-3">
+    <%= f.label :review_the_day, "今日(#{l(Time.current, format: :short)})の振り返り(400文字以内)", class:"form-label" %>
+    <%= f.text_area :review_the_day, class:"form-control" %>
   </div>
   
-  <div>
-    <%= f.label :for_me_tommorrow, "明日(#{l(Time.current.tomorrow, format: :short)})の自分へ(400文字以内)" %>
-    <%= f.text_area :for_me_tommorrow %>
+  <div class="mt-3">
+    <%= f.label :for_me_tommorrow, "明日(#{l(Time.current.tomorrow, format: :short)})の自分へ(400文字以内)", class:"form-label" %>
+    <%= f.text_area :for_me_tommorrow, class:"form-control"%>
   </div>
 
-  <div>
-    <%= f.submit "送信" %>
+  <div class="text-center mt-3">
+    <%= f.submit class:'btn btn-primary' %>
+  </div>
+
+  <div class="text-center mt-3">
+    <%= link_to "カレンダーに戻る", diaries_path %>
   </div>
 
 <% end %>

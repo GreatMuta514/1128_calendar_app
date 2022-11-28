@@ -1,3 +1,11 @@
-<h1>カレンダーアプリ</h1>
-<%= link_to "新規登録", new_user_path %>
-<%= link_to "ログイン", login_path %>
+<div class="container text-center">
+  <h1 class="fw-bold">カレンダーアプリ</h1>
+  <div class="row">
+    <div class="col">
+      <%= link_to "新規登録", new_user_path, class:"btn btn-primary" %>
+    </div>
+    <div class ="col">
+      <%= link_to "ログイン", login_path, class:"btn btn-primary" %>
+    </div>
+  </div>
+</div>

@@ -5,6 +5,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.2'
 
+# enumの日本語化
+gem 'enum_help'
 # bootstrap
 gem 'bootstrap', '~> 5.1.0'
 # 日本語化
