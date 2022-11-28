@@ -1,4 +1,4 @@
-<h1><%= params[:id] %>の日記</h1>
+<h1><%= l params[:id].to_time %>の日記</h1>
 <% if @diary %>
   <%= render 'diary', diary: @diary %>
 <% else %>
